@@ -5,4 +5,5 @@ AWS User Data script for windows server to be able to automatically join domain
 3. add other aws default policy required by ec2 such as AmazonSSMManagedInstanceCore, CloudWatchAgentAdminPolicy, AmazonEC2RoleforSSM
 4. create secret manager named prod/AD
 5. add the following secret key: UserID, PAssword, Domain, oupath, localpwd and their secret value to the secret manager.
-6. on EC2 instance AMI, add the
+6. on EC2 instance AMI, create new folder on c:\ named sorce (c:\source)
+7. add ssm agent installer to the folder c:\source (AmazonSSMAgentSetup.exe)
