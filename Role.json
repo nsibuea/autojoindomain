@@ -1,0 +1,24 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AutoScaling",
+            "Action": [
+                "autoscaling:CompleteLifecycleAction",
+                "autoscaling:DescribeAutoScalingGroups",
+                "autoscaling:DescribeAutoScalingInstances",
+                "autoscaling:DescribeAutoScalingNotificationTypes",
+                "autoscaling:DescribeLifecycleHookTypes",
+                "autoscaling:DescribeLifecycleHooks"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:autoscaling:*:XXXXXXXXXXXX:*"
+        },
+        {
+            "Sid": "ReadDomainCredential",
+            "Effect": "Allow",
+            "Action": "secretsmanager:GetSecretValue",
+            "Resource": "arn:aws:secretsmanager:<<region>>:XXXXXXXXXXX:secret:prod/AD-XXXXXX"
+        }
+    ]
+}
